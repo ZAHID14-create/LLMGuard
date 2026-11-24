@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+backend/venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment Variables
+.env
+backend/.env
+frontend/.env
+*.env.local
+
+# Build Outputs
+frontend/dist/
+frontend/build/
+
+# Logs and runtime artifacts
+logs/*.log
+!logs/.gitkeep
+*.log
+
+# Cache & Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.eslintcache
+.deepeval/
+backend/.deepeval/
+
+# Local SQLite databases & runtime data
+*.db
+*.sqlite
+*.sqlite3
+backend/data/*.db
+!backend/data/.gitkeep
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Generated evaluation reports
+backend/reports/evaluation/*.md

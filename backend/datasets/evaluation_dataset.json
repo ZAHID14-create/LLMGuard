@@ -1,0 +1,282 @@
+[
+  {
+    "test_id": "TC-GK-001",
+    "category": "General Knowledge",
+    "input": "What is the capital of Australia and when did it become the capital?",
+    "expected_output": "Canberra is the capital of Australia, chosen as a compromise between Sydney and Melbourne in 1908 and formally founded as the capital in 1913.",
+    "reference_context": [
+      "Canberra was selected as the location for the nation's capital in 1908 as a compromise between rivals Sydney and Melbourne. Construction commenced following an international design competition won by American architects Walter Burley Griffin and Marion Mahony Griffin, and Canberra was officially named the capital on March 12, 1913."
+    ],
+    "evaluation_criteria": "The response must identify Canberra as the capital and accurately mention 1908 selection or 1913 official establishment without naming Sydney or Melbourne as the current capital."
+  },
+  {
+    "test_id": "TC-GK-002",
+    "category": "General Knowledge",
+    "input": "Who was the first woman to win a Nobel Prize and in what field?",
+    "expected_output": "Marie Curie was the first woman to win a Nobel Prize, awarded in Physics in 1903.",
+    "reference_context": [
+      "Marie Curie was a Polish and naturalised-French physicist and chemist. In 1903, she became the first woman to win a Nobel Prize, sharing the Nobel Prize in Physics with her husband Pierre Curie and physicist Henri Becquerel for their pioneering research on radioactivity."
+    ],
+    "evaluation_criteria": "Must correctly state Marie Curie, Nobel Prize in Physics, and the year 1903."
+  },
+  {
+    "test_id": "TC-GK-003",
+    "category": "General Knowledge",
+    "input": "Which treaty officially ended World War I between the Allied powers and Germany?",
+    "expected_output": "The Treaty of Versailles, signed on June 28, 1919.",
+    "reference_context": [
+      "The Treaty of Versailles was the most important of the peace treaties that brought World War I to an end. It was signed on June 28, 1919 in the Hall of Mirrors at the Palace of Versailles, exactly five years after the assassination of Archduke Franz Ferdinand."
+    ],
+    "evaluation_criteria": "Must specify Treaty of Versailles and the year 1919."
+  },
+  {
+    "test_id": "TC-GK-004",
+    "category": "General Knowledge",
+    "input": "What is the deepest known location in Earth's oceans?",
+    "expected_output": "The Challenger Deep in the Mariana Trench, reaching approximately 10,900 to 11,000 meters depth.",
+    "reference_context": [
+      "The Challenger Deep is the deepest known point in the Earth's seabed hydrosphere, with a depth of approximately 10,902 to 10,929 meters (nearly 36,000 feet). It is located in the Pacific Ocean at the southern end of the Mariana Trench."
+    ],
+    "evaluation_criteria": "Must identify Challenger Deep in the Mariana Trench with approximate depth around 11,000 meters."
+  },
+  {
+    "test_id": "TC-CS-001",
+    "category": "Computer Science",
+    "input": "Explain the difference between a process and a thread in modern operating systems.",
+    "expected_output": "A process is an independent executing program with its own dedicated memory space, whereas a thread is a lightweight unit of execution within a process that shares the process's memory address space and resources.",
+    "reference_context": [
+      "In operating systems, a process is an instance of a computer program that is being executed, containing program code and its own isolated virtual address space. Threads are subsets of a process that share the parent process's memory, file descriptors, and state, but have their own thread ID, program counter, registers, and call stack."
+    ],
+    "evaluation_criteria": "Must contrast isolated address spaces of processes against shared memory between threads."
+  },
+  {
+    "test_id": "TC-CS-002",
+    "category": "Computer Science",
+    "input": "What is the average and worst-case time complexity of QuickSort?",
+    "expected_output": "Average case is O(n log n) and worst case is O(n^2).",
+    "reference_context": [
+      "QuickSort is a divide-and-conquer sorting algorithm. Its average-case time complexity is O(n log n) when balanced partitions occur. The worst-case time complexity is O(n^2), which happens when unbalanced partitions are continually produced, such as when the smallest or largest element is consistently picked as the pivot in an already sorted array."
+    ],
+    "evaluation_criteria": "Must identify average as O(n log n) and worst-case as O(n^2), explaining pivot imbalance as the cause."
+  },
+  {
+    "test_id": "TC-CS-003",
+    "category": "Computer Science",
+    "input": "What are the four ACID properties in relational database management systems?",
+    "expected_output": "Atomicity, Consistency, Isolation, and Durability.",
+    "reference_context": [
+      "ACID stands for Atomicity, Consistency, Isolation, and Durability. Atomicity ensures all operations in a transaction succeed or all roll back; Consistency ensures transactions bring the database from one valid state to another; Isolation guarantees concurrent execution leaves the system in the same state as serial execution; Durability guarantees committed transactions survive system crashes."
+    ],
+    "evaluation_criteria": "Must name all four properties correctly and define their core purpose."
+  },
+  {
+    "test_id": "TC-CS-004",
+    "category": "Computer Science",
+    "input": "Explain what the CAP theorem states for distributed systems.",
+    "expected_output": "The CAP theorem states that any distributed data store can simultaneously provide at most two of three guarantees: Consistency, Availability, and Partition tolerance.",
+    "reference_context": [
+      "Formulated by Eric Brewer, the CAP theorem states that in the event of a network partition, a distributed system must choose between either Consistency (every read receives the most recent write or an error) or Availability (every non-failing node returns a non-error response, without guaranteeing it is the most recent write)."
+    ],
+    "evaluation_criteria": "Must identify Consistency, Availability, and Partition Tolerance, highlighting the trade-off during network partitions."
+  },
+  {
+    "test_id": "TC-PRG-001",
+    "category": "Programming",
+    "input": "How does Python handle memory management and garbage collection?",
+    "expected_output": "Python manages memory using a private heap, automatic reference counting as the primary mechanism, and a generational cyclic garbage collector to detect and collect circular references.",
+    "reference_context": [
+      "CPython uses reference counting as its primary memory management mechanism: each object maintains a count of references pointing to it, and when that counter reaches zero, the memory is deallocated immediately. To handle circular reference cycles, Python includes a generational cyclic garbage collector divided into three generations (0, 1, and 2)."
+    ],
+    "evaluation_criteria": "Must mention reference counting and generational cyclic garbage collector."
+  },
+  {
+    "test_id": "TC-PRG-002",
+    "category": "Programming",
+    "input": "What is the difference between synchronous and asynchronous execution in JavaScript?",
+    "expected_output": "Synchronous code executes sequentially blocking further execution until the current task completes, whereas asynchronous code runs without blocking the main event loop, using callbacks, promises, or async/await to handle completion.",
+    "reference_context": [
+      "JavaScript runs in a single-threaded event loop environment. In synchronous execution, tasks run in sequence on the call stack and block further execution until each finishes. In asynchronous execution (via Web APIs, Promises, or async/await), tasks are offloaded and their completion callbacks enter the task or microtask queue, allowing the main thread to continue processing without blocking."
+    ],
+    "evaluation_criteria": "Must explain blocking sequential behavior vs non-blocking event-loop / promise-based execution."
+  },
+  {
+    "test_id": "TC-PRG-003",
+    "category": "Programming",
+    "input": "What is an idempotent REST HTTP method? Give examples.",
+    "expected_output": "An idempotent method is one where making multiple identical requests has the same side effect on the server state as making a single request. Examples include GET, PUT, and DELETE.",
+    "reference_context": [
+      "In HTTP REST architecture, an HTTP method is idempotent if the intended effect on the server of multiple identical requests with that method is the same as the effect for a single such request. GET, HEAD, PUT, and DELETE are idempotent, whereas POST is typically non-idempotent because multiple calls create multiple distinct resources."
+    ],
+    "evaluation_criteria": "Must define idempotence as repeated identical requests causing the same server side-effects, listing GET, PUT, or DELETE."
+  },
+  {
+    "test_id": "TC-PRG-004",
+    "category": "Programming",
+    "input": "Explain the concept of Dependency Injection in software architecture.",
+    "expected_output": "Dependency Injection is a design pattern where an object receives its dependencies from an external source rather than instantiating them internally, improving testability and decoupling.",
+    "reference_context": [
+      "Dependency Injection (DI) is a software design technique where objects do not construct their dependencies directly; instead, dependencies are supplied ('injected') from the outside, typically via constructor arguments, method parameters, or dependency injection containers. This decouples classes from specific implementations and facilitates automated unit testing via mocks."
+    ],
+    "evaluation_criteria": "Must state that dependencies are supplied externally rather than created internally, noting benefits for modularity and testing."
+  },
+  {
+    "test_id": "TC-SCI-001",
+    "category": "Science & Technology",
+    "input": "What is CRISPR-Cas9 and how does it function in genetic engineering?",
+    "expected_output": "CRISPR-Cas9 is a targeted genome editing technology derived from bacterial immune systems that uses a guide RNA to direct the Cas9 endonuclease enzyme to create double-strand breaks at specific DNA sequences.",
+    "reference_context": [
+      "CRISPR-Cas9 is adapted from a natural prokaryotic antiviral defense system. It consists of two components: a guide RNA (gRNA) complementary to a target genomic locus and a Cas9 endonuclease enzyme. The gRNA guides Cas9 to the matching DNA sequence, where Cas9 cleaves both strands, triggering cellular repair mechanisms that can disable or modify genes."
+    ],
+    "evaluation_criteria": "Must mention guide RNA targeting, Cas9 endonuclease cleavage, and double-strand DNA modification."
+  },
+  {
+    "test_id": "TC-SCI-002",
+    "category": "Science & Technology",
+    "input": "Explain the difference between nuclear fission and nuclear fusion.",
+    "expected_output": "Nuclear fission splits a heavy atomic nucleus into lighter nuclei releasing energy, while nuclear fusion combines two light atomic nuclei into a heavier nucleus releasing energy.",
+    "reference_context": [
+      "Nuclear fission is the reaction in which a heavy atomic nucleus (such as Uranium-235) absorbs a neutron and splits into two or more smaller nuclei, releasing kinetic energy and free neutrons. In contrast, nuclear fusion is the process in which two light nuclei (such as Deuterium and Tritium) combine at extreme temperature and pressure to form a heavier nucleus like Helium, releasing significant binding energy."
+    ],
+    "evaluation_criteria": "Must contrast splitting heavy nuclei (fission) with combining light nuclei (fusion)."
+  },
+  {
+    "test_id": "TC-SCI-003",
+    "category": "Science & Technology",
+    "input": "What is the primary function of mitochondria in eukaryotic cells?",
+    "expected_output": "Mitochondria generate the majority of cellular energy in the form of adenosine triphosphate (ATP) through oxidative phosphorylation and cellular respiration.",
+    "reference_context": [
+      "Mitochondria are membrane-bound organelles found in most eukaryotic cells often known as the 'powerhouses of the cell'. Their primary role is the production of adenosine triphosphate (ATP) through the Krebs cycle and oxidative phosphorylation on the inner mitochondrial membrane."
+    ],
+    "evaluation_criteria": "Must mention ATP production, cellular respiration, or oxidative phosphorylation."
+  },
+  {
+    "test_id": "TC-SCI-004",
+    "category": "Science & Technology",
+    "input": "What is quantum superposition in quantum computing?",
+    "expected_output": "Superposition is a principle of quantum mechanics where a quantum bit (qubit) can exist in a linear combination of both 0 and 1 states simultaneously until measured.",
+    "reference_context": [
+      "In quantum computing, superposition allows a qubit to represent a linear combination of the computational basis states |0⟩ and |1⟩ simultaneously, mathematically written as |ψ⟩ = α|0⟩ + β|1⟩ where |α|^2 + |β|^2 = 1. Upon measurement, the qubit collapses to either 0 or 1 with respective probabilities."
+    ],
+    "evaluation_criteria": "Must mention existing in a linear combination of multiple states (0 and 1) simultaneously until measurement."
+  },
+  {
+    "test_id": "TC-MATH-001",
+    "category": "Mathematics",
+    "input": "State the Central Limit Theorem and its significance in statistics.",
+    "expected_output": "The Central Limit Theorem states that the distribution of sample means approaches a normal distribution as the sample size becomes sufficiently large, regardless of the underlying population's shape.",
+    "reference_context": [
+      "The Central Limit Theorem (CLT) establishes that for independent and identically distributed random variables with finite mean and variance, the normalized sum or sample mean tends toward a standard normal distribution as the sample size n approaches infinity, enabling statistical inference without knowing the population distribution."
+    ],
+    "evaluation_criteria": "Must state that sample means approximate a normal distribution for sufficiently large n regardless of original population shape."
+  },
+  {
+    "test_id": "TC-MATH-002",
+    "category": "Mathematics",
+    "input": "What is the difference between permutation and combination?",
+    "expected_output": "A permutation is an arrangement of items where the order matters, whereas a combination is a selection of items where the order does not matter.",
+    "reference_context": [
+      "In combinatorics, a permutation is an ordered arrangement of distinct items from a set, represented by P(n, r) = n! / (n - r)!. A combination is an unordered selection of items, represented by C(n, r) = n! / (r! * (n - r)!), where sequence order is irrelevant."
+    ],
+    "evaluation_criteria": "Must contrast order mattering (permutations) with order not mattering (combinations)."
+  },
+  {
+    "test_id": "TC-MATH-003",
+    "category": "Mathematics",
+    "input": "Explain Bayes' Theorem and its mathematical formula.",
+    "expected_output": "Bayes' Theorem calculates the conditional probability of an event based on prior knowledge of related conditions: P(A|B) = [P(B|A) * P(A)] / P(B).",
+    "reference_context": [
+      "Bayes' Theorem provides a mathematical formula for updating prior probabilities in light of new evidence. Expressed as P(A|B) = P(B|A) * P(A) / P(B), where P(A|B) is the posterior probability of A given B, P(B|A) is the likelihood, P(A) is the prior probability, and P(B) is the marginal probability of evidence B."
+    ],
+    "evaluation_criteria": "Must state conditional probability updating and provide or describe the formula P(A|B) = P(B|A)P(A)/P(B)."
+  },
+  {
+    "test_id": "TC-LOG-001",
+    "category": "Logical Reasoning",
+    "input": "If all roses are flowers and some flowers fade quickly, does it logically follow that some roses fade quickly?",
+    "expected_output": "No, it does not logically follow. The flowers that fade quickly may belong to types other than roses.",
+    "reference_context": [
+      "Formal syllogistic logic analysis: Premise 1: All roses are flowers (All A are B). Premise 2: Some flowers fade quickly (Some B are C). From these premises, the middle term 'flowers' is not distributed in both premises. The subset of flowers that fade quickly might not intersect with the subset of flowers that are roses. Therefore, the conclusion 'some roses fade quickly' is a formal logical fallacy."
+    ],
+    "evaluation_criteria": "Must recognize the conclusion does not logically follow, explaining that fading flowers may not include roses."
+  },
+  {
+    "test_id": "TC-LOG-002",
+    "category": "Logical Reasoning",
+    "input": "You have a 3-liter jug and a 5-liter jug with unlimited water. How can you measure exactly 4 liters?",
+    "expected_output": "Fill the 5L jug completely, pour into the 3L jug until full leaving 2L in the 5L jug. Empty the 3L jug, transfer the 2L into it, fill the 5L jug again, and pour into the 3L jug until full (adding 1L), leaving exactly 4L in the 5L jug.",
+    "reference_context": [
+      "Standard water jug puzzle solution: 1) Fill the 5-liter jug to capacity (5L). 2) Pour water from the 5L jug into the 3L jug until full, leaving 2 liters in the 5L jug. 3) Empty the 3-liter jug (0L). 4) Pour the 2 liters from the 5L jug into the 3L jug. 5) Fill the 5L jug completely (5L). 6) Pour water from the 5L jug into the 3L jug until the 3L jug is full (it needs 1 liter). The 5L jug now contains exactly 4 liters (5 - 1 = 4)."
+    ],
+    "evaluation_criteria": "Must provide a mathematically valid step-by-step sequence leaving 4 liters in the 5-liter jug."
+  },
+  {
+    "test_id": "TC-LOG-003",
+    "category": "Logical Reasoning",
+    "input": "What is the post hoc ergo propter hoc logical fallacy?",
+    "expected_output": "The fallacy of assuming that because one event followed another chronologically, the first event must have caused the second event.",
+    "reference_context": [
+      "Post hoc ergo propter hoc (Latin for 'after this, therefore because of this') is an informal fallacy of questionable cause. It asserts that since event Y followed event X, event Y must have been caused by event X. Temporal sequence alone does not establish a causal relationship."
+    ],
+    "evaluation_criteria": "Must define the fallacy as confusing temporal succession with causal connection."
+  },
+  {
+    "test_id": "TC-HAL-001",
+    "category": "Incorrect / Unsupported Claims",
+    "input": "Who was the first person to walk on Mars and in what year?",
+    "expected_output": "No human has ever walked on Mars. Human missions to Mars have not yet taken place.",
+    "reference_context": [
+      "As of 2026, no human has traveled to or landed on Mars. All successful missions to the Martian surface have been robotic probes, landers, and rovers (such as Curiosity and Perseverance) operated by space agencies like NASA."
+    ],
+    "evaluation_criteria": "Must refute the premise that a human has walked on Mars, identifying that only robotic missions have landed."
+  },
+  {
+    "test_id": "TC-HAL-002",
+    "category": "Incorrect / Unsupported Claims",
+    "input": "According to the passage, what programming language was created by Guido van Rossum in 1972 at Bell Labs?",
+    "expected_output": "The passage states that Guido van Rossum created Python in 1991 at CWI in the Netherlands, not in 1972 at Bell Labs (which was the C language by Dennis Ritchie).",
+    "reference_context": [
+      "Guido van Rossum released Python in 1991 while working at Centrum Wiskunde & Informatica (CWI) in the Netherlands. In contrast, the C programming language was developed between 1972 and 1973 by Dennis Ritchie at Bell Telephone Laboratories."
+    ],
+    "evaluation_criteria": "Must refute or correct the false premise about 1972/Bell Labs, attributing Python to 1991 at CWI."
+  },
+  {
+    "test_id": "TC-HAL-003",
+    "category": "Incorrect / Unsupported Claims",
+    "input": "Can humans breathe comfortably in an atmosphere composed of 95% carbon dioxide and 5% nitrogen?",
+    "expected_output": "No, humans cannot survive breathing an atmosphere of 95% carbon dioxide; humans require oxygen for respiration and carbon dioxide levels above 10% cause rapid unconsciousness and death.",
+    "reference_context": [
+      "Humans require molecular oxygen (O2) at partial pressures of approximately 16 to 21 kPa to maintain cellular metabolism. Carbon dioxide (CO2) concentrations exceeding 5% cause hypercapnia and respiratory acidosis, while concentrations above 10% cause loss of consciousness within minutes and rapid asphyxiation."
+    ],
+    "evaluation_criteria": "Must state that humans cannot breathe this atmosphere due to absence of oxygen and lethal toxicity of high CO2."
+  },
+  {
+    "test_id": "TC-HAL-004",
+    "category": "Incorrect / Unsupported Claims",
+    "input": "Is the Great Wall of China visible from low Earth orbit with the unaided human eye?",
+    "expected_output": "No, contrary to popular myth, the Great Wall of China is generally not visible to the naked human eye from low Earth orbit without telescopic magnification.",
+    "reference_context": [
+      "According to NASA and astronaut observations, the Great Wall of China is typically not visible from low Earth orbit with the unaided eye because it is made of materials similar in color to surrounding terrain and is only a few meters wide, below the resolving power of the human eye from orbital altitudes."
+    ],
+    "evaluation_criteria": "Must debunk the myth that the Great Wall is visible with the unaided naked eye from space."
+  },
+  {
+    "test_id": "TC-HAL-005",
+    "category": "Incorrect / Unsupported Claims",
+    "input": "Did Thomas Edison invent the electronic transistor in 1947?",
+    "expected_output": "No, Thomas Edison died in 1931. The point-contact transistor was invented in December 1947 by John Bardeen, Walter Brattain, and William Shockley at Bell Labs.",
+    "reference_context": [
+      "Thomas Edison died on October 18, 1931. The transistor was invented in December 1947 at Bell Labs by American physicists John Bardeen, Walter Brattain, and William Shockley, for which they were awarded the 1956 Nobel Prize in Physics."
+    ],
+    "evaluation_criteria": "Must correct the attribution: Edison died in 1931; Bardeen, Brattain, and Shockley invented the transistor in 1947."
+  },
+  {
+    "test_id": "TC-HAL-006",
+    "category": "Incorrect / Unsupported Claims",
+    "input": "What is the speed of sound in a vacuum in meters per second?",
+    "expected_output": "Sound cannot travel through a vacuum because it requires a physical medium to propagate, so its speed in a vacuum is zero (undefined).",
+    "reference_context": [
+      "Sound is a mechanical wave that propagates via the oscillation and collision of matter particles in an elastic medium (gas, liquid, or solid). Because a vacuum is devoid of matter, sound waves cannot propagate through it; sound does not travel in a vacuum."
+    ],
+    "evaluation_criteria": "Must state that sound cannot travel through a vacuum because it requires a medium."
+  }
+]
